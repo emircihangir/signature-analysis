@@ -1,0 +1,9 @@
+*
+!data/
+!data/**
+!images/
+!images/**
+!models/
+!models/**
+!.gitignore
+*DS_Store
