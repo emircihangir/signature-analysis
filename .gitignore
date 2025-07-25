@@ -6,4 +6,6 @@
 !models/
 !models/**
 !.gitignore
+!raw_data/
+!raw_data/**
 *DS_Store
