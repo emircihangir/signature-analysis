@@ -4,7 +4,7 @@ This repository contains the code and files related to training and evaluating t
 
 For simplicity, the input is based on writing the uppercase letter **"A"** by hand. The data is treated as a time series, capturing pen movement over time, rather than static images.
 
-> 📁 Note: This repo only includes the AI model. Data collection and inference apps are available in separate repositories.
+> 📁 Note: This repo only includes the AI model. [Data collection](https://github.com/emircihangir/scv2) and [inference](https://github.com/emircihangir/signature-authenticator) apps are available in separate repositories.
 
 ---
 
@@ -46,7 +46,7 @@ For simplicity, the input is based on writing the uppercase letter **"A"** by ha
 - Model architecture design and training using Keras  
 - Avoiding overfitting with regularization and data balancing  
 - Evaluating binary classifiers with real-world, user-collected data
-- Detailed data inspection for dataset analysis
+- Detailed data inspection with matplotlib for dataset analysis
 - Working with a modular architecture across separate apps (data collection, training, inference)
 
 ---
