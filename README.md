@@ -2,7 +2,7 @@
 
 This repository contains the code and files related to training and evaluating the AI model used in my **Signature Authenticator** project. The model is trained to recognize temporal patterns in my handwriting and distinguish it from others.
 
-For simplicity, the input is based on writing the uppercase letter **"A"** by hand. The data is treated as a time series — capturing pen movement over time — rather than static images.
+For simplicity, the input is based on writing the uppercase letter **"A"** by hand. The data is treated as a time series, capturing pen movement over time, rather than static images.
 
 > 📁 Note: This repo only includes the AI model. Data collection and inference apps are available in separate repositories.
 
@@ -25,7 +25,7 @@ For simplicity, the input is based on writing the uppercase letter **"A"** by ha
 - **Architecture:** Variants experimented with include:
   - 1D Convolutional Networks (Conv1D)
   - Recurrent Networks (e.g., LSTM, GRU)
-- **Output:** Binary classification — *Written by me* vs. *Not written by me*
+- **Output:** Binary classification (*Written by me* vs. *Not written by me*)
 - **Evaluation:** Training loss, training accuracy, validation loss, validation accuracy
 
 ---
