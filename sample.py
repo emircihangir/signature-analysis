@@ -31,7 +31,7 @@ class Sample:
         elif len(input_value) > self._ref_len: raise AssertionError(f"Sample length cannot be more than {self._ref_len}")
     
     def get_len(self) -> int:
-        """returns the number of trace_points in this sample."""
+        """returns the number of trace_points in this sample's input_value."""
         return len(self.input_value)
 
     def localize_coors(self) -> None:
@@ -47,7 +47,9 @@ class Sample:
         tp_y = normalize([a.y for a in self.input_value])
         tp_ts = normalize([a.time_stamp for a in self.input_value])
         
-        assert (min(tp_x), min(tp_y), min(tp_ts), max(tp_x), max(tp_y), max(tp_ts)) == (0,0,0,1,1,1), "failed to normalize."
+        for current_list in (tp_x, tp_y, tp_ts):
+            assert min(current_list) == 0, f"min of normalized array is not 0"
+            assert max(current_list) == 1, f"max of normalized array is not 1"
         
         for i in range(self.get_len()):
             self.input_value[i].x = tp_x[i]
