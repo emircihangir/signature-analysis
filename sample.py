@@ -28,7 +28,7 @@ class Sample:
         self.localize_coors()
         self.normalize_input()
         if len(input_value) < self._ref_len: self.pad_input()
-        elif len(input_value) > self._ref_len: print('Input is too long. Sample discarded.')
+        elif len(input_value) > self._ref_len: raise AssertionError(f"Sample length cannot be more than {self._ref_len}")
     
     def get_len(self) -> int:
         """returns the number of trace_points in this sample."""
