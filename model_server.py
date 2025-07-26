@@ -12,9 +12,9 @@ def home():
 @app.route('/data', methods=['POST'])
 def receive_data():
     raw_data = request.json.get('trace') # type: ignore
-    print("Data received.")
     processed_input = process_raw_data(raw_data)
-    prediction = model.predict(processed_input) # type: ignore
+    prediction = model.predict(processed_input, verbose=0) # type: ignore
+    print(f"Data received. Prediction: {prediction}")
     
     return {'status': 'OK', 'prediction':str(prediction[0][0])}
 
